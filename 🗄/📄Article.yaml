@@ -1,5 +1,9 @@
 title: string
 
+order:
+  type: integer
+  order: true
+
 content: document-text
 
 uid:

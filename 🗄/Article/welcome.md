@@ -1,6 +1,7 @@
 ---
 title: Welcome to Stacklane
 summary: Welcome to the Stacklane Platform Evaluation Guide.  We’ve assembled this guide to provide a high level overview of the platform and our vision.  This guide largely focuses on the “what” and “why”, leaving the more detailed “how” to our [developer documentation](http://stacklane.com/docs/).
+order: 100
 ---
 
 # What Is Stacklane’s Vision? {#vision}
