@@ -1,0 +1,42 @@
+<!--TEMPLATE mustache-->
+
+{{% import {Article} from '🗄' }}
+
+{{% partial /_nav/ as nav }}
+
+{{< nav-layout-side}}
+
+{{$content2}}
+
+{{#Article.all as article}}
+
+<div class="box">
+    <div class="columns">
+        <div class="column is-half is-uid-{{article.uid}}">
+            <div class="is-size-4 subtitle">{{article.title}}</div>
+
+            <div class="is-size-6 has-text-grey-dark is-block">{{{article.summary}}}</div>
+
+            <a href="/{{article.uid}}" class="button is-small is-primary has-text-weight-semibold">{{🎨.read-more}}</a>
+        </div>
+
+        <div class="column is-half">
+            <div class="featured-questions">
+                <h3>{{🎨.featured-questions}}:</h3>
+                <ul>
+                    {{#article.content.h1 as h1}}
+                    {{#h1.id}}
+                    <li><a href="/{{article.uid}}#{{h1.id}}">{{{h1.html}}}</a></li>
+                    {{/h1.id}}
+                    {{/article.content.h1}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{/Article.all}}
+
+{{/content2}}
+
+{{/nav-layout-side}}

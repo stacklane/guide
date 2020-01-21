@@ -1,0 +1,32 @@
+
+
+@import "/bulma/utilities/initial-variables";
+@import "/bulma/utilities/functions";
+@import "/bulma/utilities/derived-variables";
+
+
+/**
+ * Overrides
+ */
+
+$body-size: 14px;
+
+//column-gap?
+//$gap: 64px;
+
+$box-padding: 2rem;
+
+.box{
+  border: 1px solid $border;
+}
+
+$navbar-breakpoint: 0px;
+$navbar-height: 3.25rem;
+$navbar-padding-vertical: 1rem;
+$navbar-padding-horizontal: 1rem;
+
+/**
+ * More
+ */
+
+$navbar-total-height: $navbar-height + $navbar-padding-vertical + $navbar-padding-vertical;

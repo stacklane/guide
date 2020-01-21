@@ -1,0 +1,20 @@
+<!--TEMPLATE mustache-->
+
+{{% partial /_nav/ as nav }}
+
+{{< nav-layout}}
+
+{{$content}}
+
+<div class="columns is-marginless">
+    <div class="column is-menu-column is-one-quarter is-hidden-mobile">
+        {{>nav-menu}}
+    </div>
+    <div class="column is-content-column">
+        {{$content2}}Content{{/content2}}
+    </div>
+</div>
+
+{{/content}}
+
+{{/nav-layout}}

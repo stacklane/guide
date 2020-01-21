@@ -1,0 +1,37 @@
+<!--TEMPLATE mustache-->
+
+{{% partial /_nav/ as nav }}
+
+{{% svg /_icons/ as icons }}
+
+{{% import {article} from '🔗' }}
+
+{{< nav-layout-side}}
+
+{{$uid}}{{article.uid}}{{/uid}}
+
+{{$title}}{{article.title}}{{/title}}
+
+{{$content2}}
+
+<article>
+    <header>
+        <h1>{{article.title}}</h1>
+    </header>
+
+    <div class="toc">
+        <h2>{{🎨.toc}}</h2>
+        <ol>
+            {{#article.get.content.h1 as h1}}
+            {{#h1.id}}
+            <li><a href="/{{article.uid}}#{{h1.id}}">{{{h1.html}}}</a></li>
+            {{/h1.id}}
+            {{/article.get.content.h1}}
+        </ol>
+    </div>
+
+    {{{article.get.content}}}
+</article>
+
+{{/content2}}
+{{/nav-layout-side}}

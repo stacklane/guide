@@ -1,0 +1,11 @@
+<!--TEMPLATE mustache-->
+
+{{% import {Article} from '🗄' }}
+
+<ul class="menu">
+    {{#Article.all as article}}
+    <li class="is-uid-{{article.uid}}">
+        <a href="/{{article.uid}}">{{article.title}}</a>
+    </li>
+    {{/Article.all}}
+</ul>

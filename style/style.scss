@@ -1,0 +1,136 @@
+@import "/style/variables";
+
+////////////
+
+@import "/bulma/utilities/all";
+
+@import "/bulma/base/_all";
+
+@import "/bulma/elements/box";
+@import "/bulma/elements/button";
+@import "/bulma/elements/container";
+@import "/bulma/elements/form";
+@import "/bulma/elements/icon";
+@import "/bulma/elements/image";
+@import "/bulma/elements/title";
+@import "/bulma/elements/table";
+@import "/bulma/elements/progress";
+
+@import "/bulma/elements/other";
+
+@import "/bulma/components/navbar";
+@import "/bulma/components/modal";
+@import "/bulma/components/level";
+@import "/bulma/components/tabs";
+
+@import "/bulma/layout/hero";
+
+@import "/bulma/grid/columns";
+
+////////////
+
+@import "/style/article";
+@import "/style/menu";
+
+////////////
+
+.is-block{
+  @include block;
+}
+
+.hero #nav{
+  transition: background-color 0.5s $easing;
+}
+
+.is-scrolled .hero #nav{
+  background: black;
+}
+
+.columns{
+  //display: flex;
+  //height: 100vh;
+}
+
+.hero{
+  position: relative;
+  z-index: 1;
+
+  &.is-medium {
+    @include tablet {
+      .hero-body {
+        padding-bottom: 7rem;
+        padding-top: 7rem;
+      }
+    }
+  }
+}
+
+.hero-background{
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+
+  svg path{
+    fill: white;
+    opacity: .03;
+  }
+}
+
+main{
+  position:relative;
+}
+
+main + footer{
+  border-top: 1px solid $border;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.is-menu-background{
+  bottom: 0;
+  right: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: $white-ter;
+}
+.is-menu-column{
+  border-right: 2px solid $white;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.is-content-column{
+  background: $white;
+  border-left: 1px solid $border;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 1rem;
+
+  article{
+    padding: 1rem 4rem;
+  }
+}
+
+.featured-questions{
+  h3{
+    font-size: .85rem;
+    line-height: 1.25;
+    font-weight: 400;
+    color: $subtitle-color;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+  }
+  ul{
+    li{
+      margin: 0 0 .5rem;
+    }
+    // Hide more than N questions:
+    li:nth-child(3) ~ li {
+      display: none;
+    }
+  }
+}
+
+
