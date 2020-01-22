@@ -1,0 +1,99 @@
+
+$selections: 'welcome' 'build' 'architecture' 'development' 'logic' 'data' 'security';
+
+.menu{
+  line-height: 2.5rem;
+  position: sticky;
+  top: $navbar-total-height + 1rem;
+  list-style: none;
+
+  a{
+    display: block;
+  }
+}
+
+body{
+  @each $uid in $selections {
+    &.is-uid-#{$uid} .menu li.is-uid-#{$uid} {
+      font-weight: bold;
+    }
+  }
+}
+
+.menu li{
+  background: no-repeat 0px 50%;
+  background-size: 1.5rem 1.5rem;
+  padding-left: 1.75rem;
+}
+
+main:after{
+  content: "";
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  top: -5rem;
+  right: -5rem;
+  background: no-repeat 100% 0;
+  background-size: contain;
+  opacity: .05;
+  transform: rotate(-20deg);
+}
+
+/**
+ * Must hard code URLs to allow translation into asset URLs
+ */
+
+.menu li.is-uid-welcome{
+  background-image: url(/selections/welcome.svg);
+}
+.is-uid-welcome main:after{
+  background-image: url(/selections/welcome.svg);
+}
+.articles .box.is-uid-welcome:after{
+  background-image: url(/selections/welcome.svg);
+}
+
+.menu li.is-uid-build{
+  background-image: url(/selections/build.svg);
+}
+.is-uid-build main:after{
+  background-image: url(/selections/build.svg);
+}
+
+.menu li.is-uid-architecture{
+  background-image: url(/selections/architecture.svg);
+}
+.is-uid-architecture main:after{
+  background-image: url(/selections/architecture.svg);
+}
+
+.menu li.is-uid-development{
+  background-image: url(/selections/development.svg);
+}
+.is-uid-development main:after{
+  background-image: url(/selections/development.svg);
+}
+
+.menu li.is-uid-logic{
+  background-image: url(/selections/logic.svg);
+}
+.is-uid-logic main:after{
+  background-image: url(/selections/logic.svg);
+}
+
+.menu li.is-uid-data{
+  background-image: url(/selections/data.svg);
+}
+.is-uid-data main:after{
+  background-image: url(/selections/data.svg);
+}
+
+.menu li.is-uid-security{
+  background-image: url(/selections/security.svg);
+}
+.is-uid-security main:after{
+  background-image: url(/selections/security.svg);
+}
+
+
+

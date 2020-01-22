@@ -12,11 +12,11 @@ Stacklane requires that all server-to-server code, connecting to remote third pa
 
 ## Content Security Policies
 
-[Content Security Policies](https://en.wikipedia.org/wiki/Content_Security_Policy) are a security standard which helps prevent common techniques for cross-site scripting (XSS), clickjacking, and other code injection attacks. A CSP header allows a site to declare trusted sources of its content (scripts, styles, images, fonts, etc).  Stacklane makes using a Content Security Policy easy through a combination of automatic behavior and custom declarations (https://stacklane.com/docs/endpoints/mustache#csp).
+[Content Security Policies](https://en.wikipedia.org/wiki/Content_Security_Policy) are a security standard which helps prevent common techniques for cross-site scripting (XSS), clickjacking, and other code injection attacks. A CSP header allows a site to declare trusted sources of its content (scripts, styles, images, fonts, etc).  Stacklane makes using a Content Security Policy easy through a combination of automatic behavior and custom declarations.
 
 ## Scripting Engine
 
-Stacklane uses a custom JavaScript engine for server-side logic. This engine is designed for speed, security, and compile-time validation. It ensures that all code runs in a secure sandbox, follows any user permissions (https://stacklane.com/docs/users/), and only connects to remote third party APIs using the internal key vault (https://stacklane.com/docs/security#keys).
+Stacklane uses a custom JavaScript engine for server-side logic. This engine is designed for speed, security, and compile-time validation. It ensures that all code runs in a secure sandbox, follows any user permissions, and only connects to remote third party APIs using the internal key vault.
 
 # How Does Stacklane Help Protect Customers and Visitors?
 

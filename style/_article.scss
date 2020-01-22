@@ -63,8 +63,8 @@ article > h1{
 
 article > h1:target {
   position: relative;
-  border-top: $navbar-total-height - 2rem solid transparent;
-  margin-top: -($navbar-total-height - 2rem);
+  border-top: $navbar-total-height + 1rem solid transparent;
+  margin-top: -($navbar-total-height + 1rem);
   //padding-top: $article-h1-top-spacing; // using margin below, so move that spacing to padding
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;

@@ -9,19 +9,13 @@
 @import "/bulma/elements/box";
 @import "/bulma/elements/button";
 @import "/bulma/elements/container";
-@import "/bulma/elements/form";
 @import "/bulma/elements/icon";
 @import "/bulma/elements/image";
 @import "/bulma/elements/title";
-@import "/bulma/elements/table";
-@import "/bulma/elements/progress";
 
 @import "/bulma/elements/other";
 
 @import "/bulma/components/navbar";
-@import "/bulma/components/modal";
-@import "/bulma/components/level";
-@import "/bulma/components/tabs";
 
 @import "/bulma/layout/hero";
 
@@ -30,7 +24,7 @@
 ////////////
 
 @import "/style/article";
-@import "/style/menu";
+@import "/style/selection";
 
 ////////////
 
@@ -38,17 +32,25 @@
   @include block;
 }
 
-.hero #nav{
+#nav{
+  background: transparent;
   transition: background-color 0.5s $easing;
+
+  //.navbar-menu{
+  //  background: transparent;
+  //}
 }
 
-.is-scrolled .hero #nav{
+.is-scrolled #nav {
   background: black;
 }
 
-.columns{
-  //display: flex;
-  //height: 100vh;
+.is-scrolled-visible{
+  visibility:hidden;
+}
+
+.is-scrolled .is-scrolled-visible{
+  visibility:visible;
 }
 
 .hero{
@@ -56,10 +58,14 @@
   z-index: 1;
 
   &.is-medium {
+    .hero-body{
+      padding-top: 5rem;
+      padding-bottom: 3rem;
+    }
     @include tablet {
       .hero-body {
-        padding-bottom: 7rem;
         padding-top: 7rem;
+        padding-bottom: 5rem;
       }
     }
   }
@@ -109,7 +115,13 @@ main + footer{
   padding-left: 1rem;
 
   article{
-    padding: 1rem 4rem;
+    padding: 1rem 1rem;
+  }
+
+  @include tablet(){
+    article{
+      padding: 1rem 4rem;
+    }
   }
 }
 
