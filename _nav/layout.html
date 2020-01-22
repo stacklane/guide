@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="/style/style.scss">
 
-    <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@12.1.5/dist/js/smooth-scroll.min.js" integrity="sha256-MMt0/21G3z0Zg4ET1kI3HC9npItDowkitRDVr0FhCxA=" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/smooth-scroll@12.1.5/dist/js/smooth-scroll.min.js" integrity="sha256-MMt0/21G3z0Zg4ET1kI3HC9npItDowkitRDVr0FhCxA=" crossorigin="anonymous"></script>
 
     <link rel="icon" type="image/png" href="/fav/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/fav/favicon-16x16.png" sizes="16x16" />
@@ -25,7 +25,7 @@
     <div class="container">
         <div class="navbar-brand">
             <a class="navbar-item">
-                Stacklane
+                {{> logo-stacklane_word }}
             </a>
             <a href="/" class="navbar-item is-scrolled-visible">
                 Platform Evaluation Guide
@@ -81,11 +81,21 @@
 </footer>
 
 <script>
-    /** Add a body class when scrolled past the fixed nav bar height. */
-    window.addEventListener('scroll', ()=>{
-        let st = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-        let past = st > document.getElementById('nav').getBoundingClientRect().height - 40;
-        document.body.classList.toggle('is-scrolled', past);
+    $ready = (fn)=>{ var r = document.readyState; ( r === 'interactive' || r === 'complete' ) ? fn() : document.addEventListener('DOMContentLoaded', fn, false); };
+
+    $ready(()=>{
+        /** Add a body class when scrolled past the fixed nav bar height. */
+        window.addEventListener('scroll', () => {
+            let st = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+            let past = st > document.getElementById('nav').getBoundingClientRect().height - 40;
+            document.body.classList.toggle('is-scrolled', past);
+        });
+
+        let height =  document.getElementById('nav').getBoundingClientRect().height;
+        if (typeof SmoothScroll !== 'undefined') new SmoothScroll('[data-scroll]', {
+            /** Related to CSS involved with handling h1:target anchors from direct links */
+            offset: height // - 80
+        });
     });
 </script>
 

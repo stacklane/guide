@@ -28,7 +28,7 @@
         <ol>
             {{#article.get.content.h1 as h1}}
             {{#h1.id}}
-            <li><a href="/{{article.uid}}#{{h1.id}}">{{{h1.html}}}</a></li>
+            <li><a href="/{{article.uid}}#{{h1.id}}" data-scroll>{{{h1.html}}}</a></li>
             {{/h1.id}}
             {{/article.get.content.h1}}
         </ol>
