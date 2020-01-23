@@ -25,6 +25,7 @@
 
 @import "/style/article";
 @import "/style/selection";
+@import "/style/nav";
 
 ////////////
 
@@ -32,21 +33,7 @@
   @include block;
 }
 
-#nav{
-  background: transparent;
-  transition: background-color 0.5s $easing;
 
-  .navbar-brand svg{
-    height: 1rem;
-  }
-  .navbar-item, .navbar-link{
-    color: white;
-  }
-}
-
-.is-scrolled #nav {
-  background: black;
-}
 
 .is-scrolled-visible{
   visibility:hidden;

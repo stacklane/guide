@@ -1,0 +1,53 @@
+@import "/style/variables";
+
+#nav.is-container-stretch {
+  flex-grow: 1;
+  margin: 0 auto;
+  width: auto;
+
+  @include desktop {
+    max-width: $desktop;// - $container-offset;
+  }
+
+  @include until-widescreen {
+    &.is-widescreen {
+      max-width: $widescreen;// - $container-offset;
+    }
+  }
+
+  @include until-fullhd {
+    &.is-fullhd {
+      max-width: $fullhd;// - $container-offset;
+    }
+  }
+
+  @include widescreen {
+    max-width: $widescreen;// - $container-offset;
+  }
+
+  @include fullhd {
+    max-width: $fullhd;// - $container-offset;
+  }
+}
+
+#nav{
+  background: transparent;
+  transition: background-color $speed $easing;
+
+  .navbar-brand svg{
+    height: 1rem;
+  }
+  .navbar-item, .navbar-link{
+    color: white;
+  }
+
+  @include desktop {
+    border-bottom-left-radius: $radius-large;
+    border-bottom-right-radius: $radius-large;
+  }
+}
+
+.is-scrolled #nav {
+  background: black;
+  box-shadow: $box-shadow;
+}

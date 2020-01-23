@@ -12,6 +12,8 @@
 
     <script defer src="https://cdn.jsdelivr.net/npm/smooth-scroll@12.1.5/dist/js/smooth-scroll.min.js" integrity="sha256-MMt0/21G3z0Zg4ET1kI3HC9npItDowkitRDVr0FhCxA=" crossorigin="anonymous"></script>
 
+    <script>$ready = (fn)=>{ let r = document.readyState; (r === 'interactive' || r === 'complete') ? fn() : document.addEventListener('DOMContentLoaded', fn, false); };</script>
+
     <link rel="icon" type="image/png" href="/fav/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/fav/favicon-16x16.png" sizes="16x16" />
 
@@ -21,7 +23,7 @@
 </head>
 <body class="is-uid-{{$uid}}none{{/uid}}">
 
-<nav id="nav" class="navbar is-fixed-top is-spaced is-transparent">
+<nav id="nav" class="navbar is-container-stretch is-fixed-top is-spaced is-transparent">
     <div class="container">
         <div class="navbar-brand">
             <a href="https://stacklane.com" class="navbar-item">
@@ -81,16 +83,15 @@
 </footer>
 
 <script>
-    $ready = (fn)=>{ var r = document.readyState; ( r === 'interactive' || r === 'complete' ) ? fn() : document.addEventListener('DOMContentLoaded', fn, false); };
-
     $ready(()=>{
-        /** Add a body class when scrolled past the fixed nav bar height. */
+        /** Body class when scrolled past the fixed nav bar height. */
         window.addEventListener('scroll', () => {
             let st = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
             let past = st > document.getElementById('nav').getBoundingClientRect().height - 40;
             document.body.classList.toggle('is-scrolled', past);
         });
 
+        /** SmoothScroll **/
         let height =  document.getElementById('nav').getBoundingClientRect().height;
         if (typeof SmoothScroll !== 'undefined') new SmoothScroll('[data-scroll]', {
             /** Related to CSS involved with handling h1:target anchors from direct links */
