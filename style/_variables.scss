@@ -1,4 +1,36 @@
 
+/**
+ * Branding
+ *
+ * Bulma uses the grey-, black-, white- variations to drive many other settings.
+ */
+
+$blue: #0c84cd;
+$blue-light: #238cd6;
+$blue-lighter: #409ce7;
+
+$primary: $blue;
+$info: $blue;
+
+$black: #14171A;
+$black-bis: #14171A;
+$black-ter: #14171A;
+
+$white: #ffffff;
+$white-ter: #F5F8FA;
+$white-bis: #F5F8FA;
+
+$grey-darker: #2a3137;
+$grey-dark: #414c56;
+$grey: #657786;
+$grey-light: #aab8c2;
+$grey-lighter: #E1E8ED;
+$grey-lightest: #F5F8FA;
+
+
+/**
+ * Import
+ */
 @import "/bulma/utilities/initial-variables";
 @import "/bulma/utilities/functions";
 @import "/bulma/utilities/derived-variables";
@@ -8,16 +40,12 @@
  * Overrides
  */
 
+$title-weight: $weight-normal;
+$subtitle-weight: $weight-normal;
+
 $body-size: 14px;
 
-//column-gap?
-//$gap: 64px;
-
 $box-padding: 2rem;
-
-.box{
-  border: 1px solid $border;
-}
 
 $navbar-breakpoint: 0px;
 $navbar-height: 3.25rem;
@@ -29,3 +57,10 @@ $navbar-padding-horizontal: 1rem;
  */
 
 $navbar-total-height: $navbar-height + $navbar-padding-vertical + $navbar-padding-vertical;
+
+.hero.is-info.is-bold{
+  background-image: linear-gradient(141deg, $blue 0%, $blue-light 71%, $blue-lighter 100%);
+}
+.box{
+  border: 1px solid $border;
+}

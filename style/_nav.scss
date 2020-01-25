@@ -35,10 +35,11 @@
   transition: background-color $speed $easing;
 
   .navbar-brand svg{
-    height: 1rem;
+    height: 2rem;
+    fill: $white;
   }
   .navbar-item, .navbar-link{
-    color: white;
+    color: $white;
   }
 
   @include desktop {
@@ -48,6 +49,6 @@
 }
 
 .is-scrolled #nav {
-  background: black;
+  background: $black;
   box-shadow: $box-shadow;
 }

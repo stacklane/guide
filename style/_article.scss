@@ -48,18 +48,23 @@ article pre[class*="language-"]:last-child{
   margin-bottom: 0rem;
 }
 
-article > h1{
-  font-size: 1.75rem; //$size-4;
-  line-height: 3.75rem;
-  flex: 0;
-  width: 100%;
-  margin-bottom: 15px;
-  color: $black-ter;
-  font-weight: 600; //400;
-  border-bottom: 1px solid $border;
+article header h1{
+  font-size: $size-2;
+  font-weight: $title-weight;
+  color: $title-color;
   margin-bottom: 2rem;
 }
 
+article > h1{
+  font-size: $size-4;
+  line-height: 3.75rem;
+  flex: 0;
+  width: 100%;
+  color: $title-color;
+  font-weight: $title-weight;
+  border-bottom: 1px solid $border;
+  margin-bottom: 2rem;
+}
 
 article > h1:target {
   position: relative;
@@ -75,23 +80,17 @@ article > h1:target {
   padding-top: $article-h1-top-spacing;
 }
 
-article header h1{
-  font-size: $size-2;
-  color: black;
-  margin-bottom: 2rem;
-}
-
 article > h2{
+  color: $subtitle-color;
   font-size: $size-6;
   text-decoration: none;
   margin-top: 1rem;
   margin-bottom: .5rem;
-  font-weight: 600;
+  font-weight: $subtitle-weight;
 }
 
 article > h3{
-  font-size: $size-6 - 0.1rem; //$size-7;
-  //text-decoration: underline;
+  font-size: $size-6 - 0.1rem;
   margin-top: 1rem;
   margin-bottom: .5rem;
   font-weight: 400;

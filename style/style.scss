@@ -33,8 +33,6 @@
   @include block;
 }
 
-
-
 .is-scrolled-visible{
   visibility:hidden;
 }
@@ -90,7 +88,7 @@ main + footer{
   position: absolute;
   left: 0;
   top: 0;
-  background: $white-ter;
+  background: $grey-lightest;
 }
 .is-menu-column{
   border-right: 2px solid $white;
