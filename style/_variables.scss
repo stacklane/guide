@@ -43,14 +43,16 @@ $grey-lightest: #F5F8FA;
 $title-weight: $weight-normal;
 $subtitle-weight: $weight-normal;
 
-$body-size: 14px;
+$body-size: 15px;
 
 $box-padding: 2rem;
 
 $navbar-breakpoint: 0px;
 $navbar-height: 3.25rem;
 $navbar-padding-vertical: 1rem;
-$navbar-padding-horizontal: 2rem;
+$navbar-padding-horizontal: 1rem;
+
+$size-7: .85rem;
 
 /**
  * More
@@ -58,9 +60,3 @@ $navbar-padding-horizontal: 2rem;
 
 $navbar-total-height: $navbar-height + $navbar-padding-vertical + $navbar-padding-vertical;
 
-.hero.is-info.is-bold{
-  background-image: linear-gradient(141deg, $blue 0%, $blue-light 71%, $blue-lighter 100%);
-}
-.box{
-  border: 1px solid $border;
-}

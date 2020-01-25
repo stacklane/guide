@@ -1,0 +1,24 @@
+@import "/style/variables";
+
+.is-block{
+  @include block;
+}
+
+.is-scrolled-visible{
+  visibility:hidden;
+}
+
+.is-scrolled .is-scrolled-visible{
+  visibility:visible;
+}
+
+.is-list-limit-3{
+  // Hide more than N questions:
+  li:nth-child(3) ~ li {
+    display: none;
+  }
+}
+
+//.title.is-bordered{
+//  border-bottom: 1px solid $border;
+//}

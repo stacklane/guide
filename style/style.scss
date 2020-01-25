@@ -26,19 +26,16 @@
 @import "/style/article";
 @import "/style/selection";
 @import "/style/nav";
+@import "/style/utils";
 
 ////////////
 
-.is-block{
-  @include block;
+.hero.is-info.is-bold{
+  background-image: linear-gradient(141deg, $blue 0%, $blue-light 71%, $blue-lighter 100%);
 }
 
-.is-scrolled-visible{
-  visibility:hidden;
-}
-
-.is-scrolled .is-scrolled-visible{
-  visibility:visible;
+.box{
+  border: 1px solid $border;
 }
 
 .hero{
@@ -115,22 +112,11 @@ main + footer{
 
 .featured-questions{
   h3{
-    font-size: .85rem;
-    line-height: 1.25;
-    font-weight: 400;
-    color: $subtitle-color;
     margin-top: .5rem;
-    margin-bottom: 1rem;
   }
   ul{
     li{
       margin: 0 0 .5rem;
     }
-    // Hide more than N questions:
-    li:nth-child(3) ~ li {
-      display: none;
-    }
   }
 }
-
-

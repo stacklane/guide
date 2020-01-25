@@ -6,6 +6,8 @@ $selections: 'welcome' 'build' 'architecture' 'development' 'logic' 'data' 'secu
   position: sticky;
   top: $navbar-total-height + 1rem;
   list-style: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 
   a{
     display: block;
