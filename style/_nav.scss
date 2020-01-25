@@ -36,10 +36,10 @@
 
   .navbar-brand svg{
     height: 2rem;
-    fill: $white;
+    fill: $white-ter;
   }
   .navbar-item, .navbar-link{
-    color: $white;
+    color: $white-ter;
   }
 
   @include desktop {
