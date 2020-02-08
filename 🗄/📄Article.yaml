@@ -4,7 +4,11 @@ order:
   type: integer
   order: true
 
-content: document-text
+content:
+  type: document-markdown
+  render:
+    generateHeaderId: true
+    autolink: blank
 
 uid:
   type: document-uid
