@@ -26,11 +26,11 @@
     <div class="toc">
         <h2>{{🎨.toc}}</h2>
         <ol>
-            {{#article.get.content.h1 as h1}}
-            {{#h1.id}}
-            <li><a href="/{{article.uid}}#{{h1.id}}" data-scroll>{{{h1.html}}}</a></li>
-            {{/h1.id}}
-            {{/article.get.content.h1}}
+            {{#article.get.content.sections as section}}
+            {{#section.id}}
+            <li><a href="/{{article.uid}}#{{section.id}}" data-scroll>{{{section.title}}}</a></li>
+            {{/section.id}}
+            {{/article.get.content.sections}}
         </ol>
     </div>
 
