@@ -49,24 +49,21 @@ article pre[class*="language-"]:last-child{
 }
 
 article header h1{
-  font-size: $size-2;
-  font-weight: $title-weight;
-  color: $title-color;
   margin-bottom: 2rem;
 }
 
-article > h1{
+article > h2{
   font-size: $size-4;
   line-height: 3.75rem;
-  flex: 0;
-  width: 100%;
+  //flex: 0;
+  //width: 100%;
   color: $title-color;
   font-weight: $title-weight;
   border-bottom: 1px solid $border;
   margin-bottom: 2rem;
 }
 
-article > h1:target {
+article > h2:target {
   position: relative;
   border-top: $navbar-total-height + 1rem solid transparent;
   margin-top: -($navbar-total-height + 1rem);
@@ -76,11 +73,11 @@ article > h1:target {
   background-clip: padding-box;
 }
 
-/*article > h1,*/ article header + p{
+article header + p{
   padding-top: $article-h1-top-spacing;
 }
 
-article > h2{
+article > h3{
   color: $subtitle-color;
   font-size: $size-6;
   text-decoration: none;
@@ -89,7 +86,7 @@ article > h2{
   font-weight: $weight-medium;
 }
 
-article > h3{
+article > h4{
   font-size: $size-6 - 0.1rem;
   margin-top: 1rem;
   margin-bottom: .5rem;

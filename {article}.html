@@ -16,7 +16,7 @@
 
 <article>
     <header>
-        <h1>{{article.title}}</h1>
+        <h1 class="title is-size-2">{{article.title}}</h1>
     </header>
 
     <div class="is-block">
@@ -34,7 +34,9 @@
         </ol>
     </div>
 
-    {{{article.get.content}}}
+    {{{
+       article.get.content.html minimumHeaderLevel=2
+    }}}
 </article>
 
 {{/content2}}
