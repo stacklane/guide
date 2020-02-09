@@ -24,11 +24,11 @@
             <div class="featured-questions">
                 <h3 class="is-size-7 subtitle is-block">{{🎨.featured-questions}}:</h3>
                 <ul class="is-list-limit-3">
-                    {{#article.content.h1 as h1}}
-                    {{#h1.id}}
-                    <li><a href="/{{article.uid}}#{{h1.id}}">{{{h1.html}}}</a></li>
-                    {{/h1.id}}
-                    {{/article.content.h1}}
+                    {{#article.content.sections as section}}
+                    {{#section.id}}
+                    <li><a href="/{{article.uid}}#{{section.id}}">{{{section.title}}}</a></li>
+                    {{/section.id}}
+                    {{/article.content.sections}}
                 </ul>
             </div>
         </div>
