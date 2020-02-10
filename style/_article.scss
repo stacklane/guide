@@ -48,50 +48,27 @@ article pre[class*="language-"]:last-child{
   margin-bottom: 0rem;
 }
 
-article header h1{
-  margin-bottom: 2rem;
-}
-
 article > h2{
-  font-size: $size-4;
-  line-height: 3.75rem;
-  //flex: 0;
-  //width: 100%;
-  color: $title-color;
-  font-weight: $title-weight;
   border-bottom: 1px solid $border;
-  margin-bottom: 2rem;
-}
 
-article > h2:target {
-  position: relative;
-  border-top: $navbar-total-height + 1rem solid transparent;
-  margin-top: -($navbar-total-height + 1rem);
-  //padding-top: $article-h1-top-spacing; // using margin below, so move that spacing to padding
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
-  background-clip: padding-box;
-}
-
-article header + p{
-  padding-top: $article-h1-top-spacing;
+  &:target{
+    position: relative;
+    border-top: $navbar-total-height + 1rem solid transparent;
+    margin-top: -($navbar-total-height + 1rem);
+    //padding-top: $article-h1-top-spacing; // using margin below, so move that spacing to padding
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+  }
 }
 
 article > h3{
-  color: $subtitle-color;
-  font-size: $size-6;
-  text-decoration: none;
-  margin-top: 1rem;
-  margin-bottom: .5rem;
-  font-weight: $weight-medium;
-}
-
-article > h4{
-  font-size: $size-6 - 0.1rem;
-  margin-top: 1rem;
-  margin-bottom: .5rem;
-  font-weight: 400;
-  color: $grey-darker;
+//  color: $subtitle-color;
+//  font-size: $size-6;
+//  text-decoration: none;
+//  margin-top: 1rem;
+//  margin-bottom: .5rem;
+//  font-weight: $weight-medium;
 }
 
 article code{

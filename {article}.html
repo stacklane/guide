@@ -15,9 +15,7 @@
 {{$content2}}
 
 <article>
-    <header>
-        <h1 class="title is-size-2">{{article.title}}</h1>
-    </header>
+    <h1 class="title is-size-2">{{article.title}}</h1>
 
     <div class="is-block">
         {{{article.summary}}}
@@ -35,7 +33,10 @@
     </div>
 
     {{{
-       article.get.content.html minimumHeaderLevel=2
+       article.get.content.html
+          minimumHeaderLevel=2
+          h2='title is-size-4'
+          h3='is-size-6 has-text-weight-medium'
     }}}
 </article>
 

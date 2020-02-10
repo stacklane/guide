@@ -27,6 +27,10 @@ $grey-light: #aab8c2;
 $grey-lighter: #E1E8ED;
 $grey-lightest: #F5F8FA;
 
+$block-spacing: 2rem;
+
+$size-7: .8rem;
+$body-size: 14px;
 
 /**
  * Import
@@ -40,19 +44,16 @@ $grey-lightest: #F5F8FA;
  * Overrides
  */
 
+$box-padding: 2rem;
+
 $title-weight: $weight-normal;
 $subtitle-weight: $weight-normal;
-
-$body-size: 14px;
-
-$box-padding: 2rem;
+$title-line-height: 3.75rem;
 
 $navbar-breakpoint: 0px;
 $navbar-height: 3.25rem;
 $navbar-padding-vertical: 1rem;
 $navbar-padding-horizontal: 1rem;
-
-$size-7: .8rem;
 
 /**
  * More
