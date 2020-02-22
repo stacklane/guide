@@ -21,6 +21,7 @@ Stacklane supports a rich set of field types, speeding up time-to-market by addr
 - *Integer* – 64 bit whole number
 - *Double* – 64 bit floating point number
 - *Timestamp* – a point in time
+- *Date* – a calendar date
 - *Options* – one value from a predefined set of values
 - *Country Code* – ISO 3166-1 alpha-3 country code
 - *Map* – freeform name / value pairs or attributes
