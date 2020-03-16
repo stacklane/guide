@@ -30,6 +30,17 @@
 
 ////////////
 
+.navbar-end > a.navbar-item{
+  color: $grey-lighter !important;
+
+  &:hover{
+    color: $grey-lightest !important;
+  }
+  &.is-active{
+    color: $grey-darker !important;
+  }
+}
+
 .hero.is-info.is-bold{
   background-image: linear-gradient(141deg, $blue 0%, $blue-light 71%, $blue-lighter 100%);
 }
