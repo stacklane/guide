@@ -35,6 +35,7 @@ body{
 main:after{
   content: "";
   position: absolute;
+  /* overflow issues on ipad which need to be fixed
   width: 20rem;
   height: 20rem;
   top: -5rem;
@@ -42,7 +43,14 @@ main:after{
   background: no-repeat 100% 0;
   background-size: contain;
   opacity: .05;
-  transform: rotate(-20deg);
+  transform: rotate(-20deg);*/
+  width: 20rem;
+  height: 20rem;
+  top: 0rem;
+  right: 0rem;
+  background: no-repeat 5rem -5rem;
+  background-size: contain;
+  opacity: .05;
 }
 
 /**
