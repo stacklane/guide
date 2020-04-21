@@ -1,1 +1,1 @@
-stacklane.com/guide/
+https://stacklane.com/guide/

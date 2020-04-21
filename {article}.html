@@ -6,11 +6,11 @@
 
 {{% import {article} from '🔗' }}
 
+{{% const title = article.title }}
+{{% const description = article.summary.value }}
+{{% const uid = article.uid }}
+
 {{< nav-layout-side}}
-
-{{$uid}}{{article.uid}}{{/uid}}
-
-{{$title}}{{article.title}}{{/title}}
 
 {{$content2}}
 
